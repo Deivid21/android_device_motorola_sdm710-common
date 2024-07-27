@@ -22,38 +22,33 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <stdint.h>
-#include <string.h>
+#pragma push_macro("PROPERTY_VALUE_MAX")
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-int property_get(const char *key, char *value, const char *default_value);
-#ifdef __cplusplus
-}
-#endif
+#include <cutils/properties.h>
+#include <string.h>
 
 static inline const char* BtmGetDefaultName()
 {
-    char product_device[92];
+    char product_device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", product_device, "");
 
-    if (strstr(product_device, "nairo"))
-        return "Moto G 5G Plus";
-    if (strstr(product_device, "racer"))
-        return "Motorola Edge";
-    if (strstr(product_device, "smith"))
-        return "Motorola Razr 2";
+    if (strstr(product_device, "astro"))
+        return "Motorola One Fusion";
+    if (strstr(product_device, "olson"))
+        return "Motorola Razr";
 
-    // Fallback to Moto Generic
+    // Fallback to motorola
     return "Motorola";
 }
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-// Disables read remote device feature
-#define BTM_WBS_INCLUDED TRUE
-#define BTIF_HF_WBS_PREFERRED TRUE
 
 #define BLE_VND_INCLUDED   TRUE
-#endif
+#define BTIF_HF_WBS_PREFERRED TRUE
+#define BTM_WBS_INCLUDED TRUE
+#define MAX_ACL_CONNECTIONS   16
+#define MAX_L2CAP_CHANNELS    16
 
+#pragma pop_macro("PROPERTY_VALUE_MAX")
+
+#endif
