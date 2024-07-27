@@ -587,7 +587,7 @@ process_touch_instance()
 		notice "property [$touch_status_prop] set to [`getprop $touch_status_prop`]"
 		notice "Handling touch ID [$touch_instance] permissions"
 	fi
-	setup_permissions
+	#setup_permissions
 }
 
 # Main starts here
