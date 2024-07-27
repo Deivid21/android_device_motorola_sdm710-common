@@ -1,4 +1,4 @@
-package lito
+package sdm710
 
 import (
     "android/soong/android"

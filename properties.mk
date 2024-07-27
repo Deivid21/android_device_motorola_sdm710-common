@@ -1,5 +1,5 @@
 #
-# Properties for sm7250
+# Properties for sdm710
 #
 
 # Audio

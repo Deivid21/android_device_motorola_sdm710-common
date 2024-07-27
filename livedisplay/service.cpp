@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service-sysfs.motorola_lito"
+#define LOG_TAG "vendor.lineage.livedisplay@2.0-service-sysfs.motorola_sdm710"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>

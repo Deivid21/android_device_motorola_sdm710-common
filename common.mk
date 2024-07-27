@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/sm7250-common/sm7250-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/sdm710-common/sdm710-common-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -142,10 +142,10 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libtinycompress.vendor
 
-ifneq (,$(filter %nairo, $(TARGET_PRODUCT)))
+ifneq (,$(filter %astro, $(TARGET_PRODUCT)))
 else
 PRODUCT_PACKAGES += \
-    audio.primary.lito \
+    audio.primary.sdm710 \
     libqcompostprocbundle
 endif
 
@@ -160,8 +160,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-service \
     android.hardware.boot@1.1-impl-qti.recovery \
-    bootctrl.lito \
-    bootctrl.lito.recovery
+    bootctrl.sdm710 \
+    bootctrl.sdm710.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
@@ -236,7 +236,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.lito \
+    gralloc.sdm710 \
     libdisplayconfig \
     libdisplayconfig.qti \
     libdisplayconfig.vendor \
@@ -244,7 +244,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    memtrack.lito \
+    memtrack.sdm710 \
     vendor.display.config@1.15.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
@@ -325,7 +325,7 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs.motorola_lito
+    vendor.lineage.livedisplay@2.0-service-sysfs.motorola_sdm710
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -399,7 +399,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.sm7250-libperfmgr
+    android.hardware.power-service.sdm710-libperfmgr
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json

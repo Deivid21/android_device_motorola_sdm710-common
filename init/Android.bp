@@ -15,7 +15,7 @@
 //
 
 motorola_lito_init_library_static {
-    name: "libinit_lito",
+    name: "libinit_sdm710",
     recovery_available: true,
     srcs: [
         "init_lito.cpp",
@@ -24,7 +24,7 @@ motorola_lito_init_library_static {
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
-        "device/motorola/sm7250-common"
+        "device/motorola/sdm710-common"
     ],
     shared_libs: [
         "libbase",
