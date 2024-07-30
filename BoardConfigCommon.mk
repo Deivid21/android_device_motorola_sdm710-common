@@ -71,7 +71,7 @@ TARGET_MODULE_ALIASES += \
     apr_dlkm.ko:audio_apr.ko \
     bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
     hdmi_dlkm.ko:audio_hdmi.ko \
-    machine_dlkm.ko:audio_machine_lito.ko \
+    machine_dlkm.ko:audio_machine_sdm710.ko \
     mbhc_dlkm.ko:audio_mbhc.ko \
     native_dlkm.ko:audio_native.ko \
     pinctrl_lpi_dlkm.ko:audio_pinctrl_lpi.ko \

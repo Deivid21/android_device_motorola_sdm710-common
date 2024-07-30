@@ -5,5 +5,5 @@ import (
 )
 
 func init() {
-    android.RegisterModuleType("motorola_lito_init_library_static", initLibraryFactory)
+    android.RegisterModuleType("motorola_sdm710_init_library_static", initLibraryFactory)
 }

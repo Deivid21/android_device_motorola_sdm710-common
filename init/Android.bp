@@ -14,11 +14,11 @@
 // limitations under the License.
 //
 
-motorola_lito_init_library_static {
+motorola_sdm710_init_library_static {
     name: "libinit_sdm710",
     recovery_available: true,
     srcs: [
-        "init_lito.cpp",
+        "init_sdm710.cpp",
         "DeviceLibinit.cpp"
     ],
     include_dirs: [
