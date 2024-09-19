@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/sdm710-common/sdm710-common-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -56,8 +56,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-ifeq ($(filter %_foles %_parker,$(TARGET_PRODUCT)),)
-$(call inherit-product, device/motorola/sm6150-common/common_dynamic.mk)
+ifneq (,$(filter %astro, $(TARGET_PRODUCT)),)
+$(call inherit-product, device/motorola/sdm710-common/common_dynamic.mk)
 endif
 
 # Properties
@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
-    audio.primary.sm6150 \
+    audio.primary.sdm710 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -229,8 +229,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.sm6150 \
-    hwcomposer.sm6150 \
+    gralloc.sdm710 \
+    hwcomposer.sdm710 \
     libdisplayconfig \
     libdisplayconfig.qti \
     libdisplayconfig.vendor \
@@ -238,7 +238,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
-    memtrack.sm6150 \
+    memtrack.sdm710 \
     vendor.display.config@1.15.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@1.1.vendor \
@@ -323,7 +323,7 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs.motorola_sm6150
+    vendor.lineage.livedisplay@2.0-service-sysfs.motorola_sdm710
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -389,7 +389,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.sm6150-libperfmgr
+    android.hardware.power-service.sdm710-libperfmgr
 
 # QCOM
 PRODUCT_COPY_FILES += \

@@ -38,20 +38,10 @@ static inline const char* BtmGetDefaultName()
     char product_device[92];
     property_get("ro.product.device", product_device, "");
 
-    if (strstr(product_device, "foles"))
-        return "Moto Z4";
-    if (strstr(product_device, "parker"))
-        return "Moto one zoom";
-    if (strstr(product_device, "def"))
-        return "Moto one hyper";
-    if (strstr(product_device, "liber"))
-        return "Moto one fusion+";
-    if (strstr(product_device, "odessa"))
-        return "Moto G9 plus";
-    if (strstr(product_device, "minsk"))
-        return "Moto G stylus (2021)";
-    if (strstr(product_device, "hanoip"))
-        return "Moto G60";
+    if (strstr(product_device, "olson"))
+        return "Motorola Razr";
+    if (strstr(product_device, "astro"))
+        return "Motorola One Fusion";
 
     // Fallback to Moto Generic
     return "Motorola";
