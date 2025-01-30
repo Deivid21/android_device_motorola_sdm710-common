@@ -4,7 +4,7 @@
     "target_path": "hardware/motorola"
   },
   {
-    "repository": "android_kernel_motorola_sm6225",
-    "target_path": "kernel/motorola/sm6225"
+    "repository": "android_kernel_motorola_sdm710",
+    "target_path": "kernel/motorola/sdm710"
   }
 ]

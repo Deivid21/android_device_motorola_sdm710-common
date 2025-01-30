@@ -19,11 +19,12 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/motorola/sm6225-common',
-    'hardware/qcom-caf/sm8250',
+    'device/motorola/sdm710-common',
+    'hardware/qcom-caf/sdm845',
     'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
-    'vendor/qcom/opensource/display',
 ]
 
 
@@ -56,7 +57,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'sm6225-common',
+    'sdm710-common',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

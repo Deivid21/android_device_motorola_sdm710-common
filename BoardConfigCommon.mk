@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/motorola/sm6225-common
+COMMON_PATH := device/motorola/sdm710-common
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -53,7 +53,7 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 ODM_MANIFEST_FILES := $(COMMON_PATH)/manifest-qva.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm6225
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sdm710
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION ?= 3
@@ -74,8 +74,8 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_CONFIG := vendor/bengal-perf_defconfig vendor/debugfs.config vendor/ext_config/moto-bengal.config
-TARGET_KERNEL_SOURCE := kernel/motorola/sm6225
+TARGET_KERNEL_CONFIG := sdm670-perf_defconfig vendor/debugfs.config ext_config/moto-sdm670.config
+TARGET_KERNEL_SOURCE := kernel/motorola/sdm710
 
 # Kernel Modules - Audio
 TARGET_MODULE_ALIASES += \
@@ -144,7 +144,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := bengal
+TARGET_BOARD_PLATFORM := sdm710
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/fsg:/fsg
@@ -190,4 +190,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/motorola/sm6225-common/BoardConfigVendor.mk
+include vendor/motorola/sdm710-common/BoardConfigVendor.mk

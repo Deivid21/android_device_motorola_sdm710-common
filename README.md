@@ -1,4 +1,4 @@
-# Common device tree for Motorola SM6225 devices
+# Common device tree for Motorola SDM710 devices
 
 
 ```

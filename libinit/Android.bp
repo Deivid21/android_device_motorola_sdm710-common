@@ -4,8 +4,8 @@
 //
 
 cc_library_static {
-    name: "libinit_sm6225",
-    srcs: ["init_sm6225.cpp"],
+    name: "libinit_sdm710",
+    srcs: ["init_sdm710.cpp"],
     recovery_available: true,
     include_dirs: ["system/core/init"],
     shared_libs: ["libbase"]

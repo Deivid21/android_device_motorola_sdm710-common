@@ -6,7 +6,7 @@
 
 #pragma once
 
-#define LOG_TAG "android.hardware.lights-service.bengal"
+#define LOG_TAG "android.hardware.lights-service.sdm710"
 
 #include <aidl/android/hardware/light/BnLights.h>
 #include <array>

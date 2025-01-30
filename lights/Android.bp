@@ -4,10 +4,10 @@
 //
 
 cc_binary {
-    name: "android.hardware.lights-service.bengal",
+    name: "android.hardware.lights-service.sdm710",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.lights.bengal.rc"],
-    vintf_fragments: ["android.hardware.lights.bengal.xml"],
+    init_rc: ["android.hardware.lights.sdm710.rc"],
+    vintf_fragments: ["android.hardware.lights.sdm710.xml"],
     vendor: true,
     shared_libs: [
         "libbase",

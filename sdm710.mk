@@ -49,12 +49,12 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio_amplifier.bengal \
+    audio_amplifier.sdm710 \
     audio.bluetooth.default \
-    audio.primary.bengal \
+    audio.primary.sdm710 \
     audio.r_submix.default \
     audio.usb.default \
-    sound_trigger.primary.bengal
+    sound_trigger.primary.sdm710
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -369,4 +369,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/motorola/sm6225-common/sm6225-common-vendor.mk)
+$(call inherit-product, vendor/motorola/sdm710-common/sdm710-common-vendor.mk)
