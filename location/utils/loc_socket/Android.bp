@@ -7,6 +7,7 @@ cc_library_shared {
         "libcutils",
         "liblog",
         "libgps.utils",
+        "libqsocket",
     ],
 
     srcs: ["LocSocket.cpp"],
@@ -14,6 +15,7 @@ cc_library_shared {
     cflags: [
         "-fno-short-enums",
         "-D_ANDROID_",
+        "-DUSE_QSOCKET",
     ] + GNSS_CFLAGS,
 
     header_libs: [

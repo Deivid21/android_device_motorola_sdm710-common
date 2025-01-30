@@ -913,7 +913,7 @@ void LocApiBase::
 DEFAULT_IMPL()
 
 LocationError LocApiBase::
-    setParameterSync(const GnssConfig& /*gnssConfig*/)
+    setParameterSync(const GnssConfig& gnssConfig)
 DEFAULT_IMPL(LOCATION_ERROR_SUCCESS)
 
 void LocApiBase::
@@ -921,7 +921,7 @@ void LocApiBase::
 DEFAULT_IMPL()
 
 void LocApiBase::
-    configConstellationMultiBand(const GnssSvTypeConfig& /*secondaryBandConfig*/,
+    configConstellationMultiBand(const GnssSvTypeConfig& secondaryBandConfig,
                                  LocApiResponse* /*adapterResponse*/)
 DEFAULT_IMPL()
 
