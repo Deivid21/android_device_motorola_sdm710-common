@@ -28,9 +28,6 @@
          If false, it will be left to WifiCond to derive the value from NL80211 interface -->
     <bool name="config_wifiFrameworkMaxNumSpatialStreamDeviceOverrideEnable">false</bool>
 
-    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
-    <bool name="config_wifiSaeH2eSupported">true</bool>
-
     <!-- Boolean indicating that softap passphrase need to enable ASCII encodable check -->
     <bool name="config_wifiSoftapPassphraseAsciiEncodableCheck">false</bool>
 
